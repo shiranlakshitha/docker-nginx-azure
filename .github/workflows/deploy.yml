@@ -20,5 +20,5 @@ jobs:
                   cd /home/docker-nginx-azure || cd ~/docker-nginx-azure || exit 1
                   pwd
                   git pull origin main
-                  docker compose down
-                  docker compose up -d --build
+                  docker-compose down
+                  docker-compose up -d --build
