@@ -1,0 +1,14 @@
+services: 
+  frontend:
+    build: ./frontend
+    container_name: nextjs_app
+    restart: always
+
+  nginx:
+    build: ./nginx
+    container_name: nginx_server
+    ports:
+      - "80:80"
+    depends_on:
+      - frontend
+      
