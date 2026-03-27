@@ -17,8 +17,8 @@ jobs:
                 username: ${{ secrets.VM_USERNAME }}
                 key: ${{ secrets.VM_SSH_KEY }}
                 script: |
-                  cd docker-nginx-azure
+                  cd /home/docker-nginx-azure
                   pwd
                   git pull origin main
-                  docker-compose down
-                  docker-compose up -d --build
+                  sudo docker-compose down
+                  sudo docker-compose up -d --build
